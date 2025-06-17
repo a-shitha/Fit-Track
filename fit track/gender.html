@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Gender - FitTrack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="gender-body">
+  <div class="gender-container">
+    <h2>Select Your Gender</h2>
+    <div class="gender-options">
+      <div class="gender-box" onclick="selectGender('Male')">
+        <img src="https://img.icons8.com/ios-filled/100/000000/male.png" alt="Male" />
+        <span>Male</span>
+      </div>
+      <div class="gender-box" onclick="selectGender('Female')">
+        <img src="https://img.icons8.com/ios-filled/100/000000/female.png" alt="Female" />
+        <span>Female</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function selectGender(gender) {
+      localStorage.setItem("userGender", gender);
+      window.location.href = "details.html"; // ➡️ Move to next page
+    }
+  </script>
+</body>
+</html>

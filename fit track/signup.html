@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - FitTrack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="signup-body">
+  <div class="form-container">
+    <h2>Fitness Guide - Sign Up</h2>
+    <form onsubmit="saveSignup(event)">
+      <input type="text" id="signup-name" placeholder="Full Name" required />
+      <input type="text" id="signup-contact" placeholder="Mobile or Email" required />
+      <input type="password" id="signup-password" placeholder="Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    function saveSignup(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("signup-name").value;
+      const contact = document.getElementById("signup-contact").value;
+      const password = document.getElementById("signup-password").value;
+
+      const userData = {
+        name,
+        contact,
+        password
+      };
+
+      localStorage.setItem("fittrackUser", JSON.stringify(userData));
+
+      alert("Sign-up successful! Please login now.");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
+

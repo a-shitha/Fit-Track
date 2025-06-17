@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Detailed Plan</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fff3e0, #e1f5fe);
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #00796b;
+    }
+
+    .plan-section {
+      margin-bottom: 25px;
+      padding: 20px;
+      border-left: 5px solid #00796b;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
+
+    .plan-section h3 {
+      margin-top: 0;
+      color: #004d40;
+    }
+
+    .plan-section p {
+      margin: 5px 0;
+      line-height: 1.5;
+    }
+
+    .tips {
+      background-color: #e0f2f1;
+      border-left: 5px solid #009688;
+    }
+
+    .button-group {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .button-group button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-group button:hover {
+      background-color: #004d40;
+    }
+    .workout-section img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 id="plan-title"></h2>
+    <div id="plan-details"></div>
+    <div class="button-group">
+      <button onclick="history.back()">⬅ Back</button>
+    </div>
+  </div>
+
+  <script src="finalplan.js"></script>
+</body>
+</html>
+

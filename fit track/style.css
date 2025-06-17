@@ -1,0 +1,437 @@
+/* === Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* === Common Container === */
+.container, .form-container, .form-box, .gender-container, .index-container {
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+h2, .heading {
+  font-size: 2rem;
+  color: #0072ff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* === Inputs & Buttons === */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button, .next-btn {
+  background-color: #0072ff;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, .next-btn:hover {
+  background-color: #005ad1;
+}
+
+/* === Index Page === */
+.index-body {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+/* === Login Page === */
+.login-body {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+/* === Signup Page === */
+.signup-body {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+/* === Gender Selection === */
+.gender-body {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+.gender-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gender-box {
+  border: 2px solid #0072ff;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gender-box:hover {
+  background-color: #0072ff;
+  color: white;
+}
+
+.gender-box img {
+  width: 40px;
+  height: 40px;
+}
+
+.gender-box span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* === Personal Details Page === */
+.details-body {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  padding: 20px;
+}
+
+.input-card {
+  background: #f2f8ff;
+  border: 2px solid #0072ff;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-card label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #0072ff;
+}
+
+.value-box {
+  background-color: #0072ff;
+  color: white;
+  padding: 10px;
+  width: 60px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.option-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.option-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.option-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.option-card h2 {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+/* === Goal Selection Page === */
+.workout-body {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  flex-direction: column;
+  padding: 30px 20px;
+}
+
+.goal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.goal-box {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  border: 3px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.goal-box span {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 6px black;
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+.goal-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.goal-box.selected {
+  border: 3px solid #00cc99;
+  box-shadow: 0 0 12px #00cc9977;
+}
+
+/* === Plan Display === */
+.plan-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.plan-body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f6f6f6, #e3f2fd);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.plan-container {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #333;
+}
+
+.button-group button {
+  margin: 10px;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #1976d2;
+}
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.plan-section {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f2f4f8;
+  color: #333;
+}
+
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0d6efd;
+}
+
+.plan-section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fcfcfc;
+}
+
+.plan-section h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #333;
+}
+
+.plan-section p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+.media-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.image-box {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #eee;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workout-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-container iframe {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.tips p {
+  background: #eaf4ff;
+  border-left: 5px solid #2196f3;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .media-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-box,
+  .video-container iframe {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+
+
+
+
+/* === Responsive === */
+@media (max-width: 480px) {
+  .form-box, .container {
+    padding: 20px 15px;
+  }
+
+  h2, .heading {
+    font-size: 1.5rem;
+  }
+
+  .value-box {
+    width: 50px;
+    padding: 8px;
+  }
+
+  .next-btn {
+    width: 100%;
+  }
+}
+

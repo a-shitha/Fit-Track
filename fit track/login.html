@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - FitTrack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="login-body">
+  <div class="form-container">
+    <h2>Welcome Back to FitTrack!</h2>
+    <form onsubmit="loginUser(event)">
+      <input type="text" id="login-contact" placeholder="Mobile or Email" required />
+      <input type="password" id="login-password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p>New user? <a href="signup.html">Create an account</a></p>
+  </div>
+
+  <script>
+    function loginUser(event) {
+      event.preventDefault();
+
+      const contact = document.getElementById("login-contact").value;
+      const password = document.getElementById("login-password").value;
+
+      const storedData = JSON.parse(localStorage.getItem("fittrackUser"));
+
+      if (storedData && storedData.contact === contact && storedData.password === password) {
+        alert("Login successful! Welcome, " + storedData.name);
+        window.location.href = "gender.html"; // Proceed to next page
+      } else {
+        alert("Invalid credentials. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enter Details - FitTrack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="details-body">
+  <div class="form-box">
+    <h2>Enter Your Details</h2>
+    <form onsubmit="saveDetails(event)">
+      
+      <div class="input-card">
+        <label for="age">Age:</label>
+        <input type="range" id="age" min="5" max="100" value="25" oninput="updateValue('age')"/>
+        <div class="value-box" id="ageValue">25</div>
+      </div>
+
+      <div class="input-card">
+        <label for="weight">Weight (kg):</label>
+        <input type="range" id="weight" min="30" max="500" value="60" oninput="updateValue('weight')"/>
+        <div class="value-box" id="weightValue">60</div>
+      </div>
+
+      <div class="input-card">
+        <label for="height">Height (cm):</label>
+        <input type="range" id="height" min="50" max="200" value="160" oninput="updateValue('height')"/>
+        <div class="value-box" id="heightValue">160</div>
+      </div>
+
+      <button type="submit" class="next-btn">Next</button>
+    </form>
+  </div>
+
+  <script>
+    function updateValue(id) {
+      const value = document.getElementById(id).value;
+      document.getElementById(id + 'Value').innerText = value;
+    }
+
+    function saveDetails(event) {
+      event.preventDefault();
+
+      const age = document.getElementById("age").value;
+      const weight = document.getElementById("weight").value;
+      const height = document.getElementById("height").value;
+
+      localStorage.setItem("userAge", age);
+      localStorage.setItem("userWeight", weight);
+      localStorage.setItem("userHeight", height);
+
+      window.location.href = "workout.html";
+    }
+  </script>
+</body>
+</html>
+
+
